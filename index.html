@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Danil</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleMobile.css" />
   </head>
   <body>
     <header>
@@ -13,11 +14,28 @@
         <a href="/" class="logo">
           <img src="images/ProxyFirst.svg" alt="ProxyLab" />
         </a>
-        <div class="navElements">
+        <a href="/" class="logoMobile">
+          <img src="images/ProxyMobile.svg" alt="ProxyLab" />
+        </a>
+        <div class="navElements" id="myLinks">
           <a href="/" class="navLink">Home</a>
           <a href="/" class="navLink">How tere works</a>
           <a href="/" class="navLink">Tere benefits</a>
           <a href="/" class="helpCenter">Help Center</a>
+        </div>
+        <div class="listMenu">
+          <a
+            href="javascript:void(0);"
+            class="iconListMenu"
+            onclick="sideBar()"
+          >
+            <img
+              src="images/listMenu.svg"
+              alt="list menu"
+              class="openSideBar"
+            />
+            <div class="closeSideBar">x</div>
+          </a>
         </div>
       </nav>
     </header>
@@ -25,6 +43,9 @@
       <section class="sectionHeader">
         <div class="header">
           <div class="content1">
+            <div class="img1mobile">
+              <img src="images/img1mobile.svg" alt="device" />
+            </div>
             <h1>SOCKS5 Proxy Lab</h1>
             <p>
               Proxy Lab - quality server proxies in large volume at stable
@@ -72,51 +93,53 @@
           </p>
         </div>
         <div class="sliderWrapper">
-          <div class="weOfferContent">
-            <div class="slide1">
-              <img src="images/img2.svg" alt="background-image" class="img2" />
-              <div class="listWeOffer">
-                <div class="numberListWeOffer oddList">1</div>
-                <div class="headerListWeOffer">MORE 23000 IPS</div>
-                <div class="textListWeOffer">
-                  12000+ United States <br />
-                  4000+ Europe <br />
-                  1000+ Latin America <br />
-                  4000+Canada
-                </div>
-              </div>
-              <div class="listWeOffer">
-                <div class="numberListWeOffer">2</div>
-                <div class="headerListWeOffer">EASY PAYMENT METHODS</div>
-                <div class="textListWeOffer">
-                  We accept payment in BTC, ETH, USDT, LTC
-                </div>
-              </div>
-              <div class="listWeOffer">
-                <div class="numberListWeOffer oddList">3</div>
-                <div class="headerListWeOffer">BEST PRICES</div>
-                <div class="textListWeOffer">
-                  Different tariff options <br />
-                  25 proxies - $5/per month <br />
-                  100 proxies - 30$/per month <br />
-                  1000 proxies - $100/per month
-                </div>
-              </div>
-              <div class="listWeOffer">
-                <div class="numberListWeOffer">4</div>
-                <div class="headerListWeOffer">SUPPORT</div>
-                <div class="textListWeOffer">
-                  We offer reliable and high-quality support
-                </div>
+          <div class="textUpSlide">
+            <div class="listWeOffer">
+              <div class="numberListWeOffer oddList">1</div>
+              <div class="headerListWeOffer">MORE 23000 IPS</div>
+              <div class="textListWeOffer">
+                12000+ United States <br />
+                4000+ Europe <br />
+                1000+ Latin America <br />
+                4000+ Canada
               </div>
             </div>
-            <div class="slide2">
+            <div class="listWeOffer">
+              <div class="numberListWeOffer">2</div>
+              <div class="headerListWeOffer">EASY PAYMENT METHODS</div>
+              <div class="textListWeOffer">
+                We accept payment in BTC, ETH, USDT, LTC
+              </div>
+            </div>
+            <div class="listWeOffer">
+              <div class="numberListWeOffer oddList">3</div>
+              <div class="headerListWeOffer">BEST PRICES</div>
+              <div class="textListWeOffer">
+                Different tariff options <br />
+                25 proxies - $5/per month <br />
+                100 proxies - 30$/per month <br />
+                1000 proxies - $100/per month
+              </div>
+            </div>
+            <div class="listWeOffer">
+              <div class="numberListWeOffer">4</div>
+              <div class="headerListWeOffer">SUPPORT</div>
+              <div class="textListWeOffer">
+                We offer reliable and high-quality support
+              </div>
+            </div>
+          </div>
+          <div class="weOfferSlides">
+            <div class="slide">
               <img src="images/img2.svg" alt="background-image" class="img2" />
             </div>
-            <div class="slide3">
+            <div class="slide">
               <img src="images/img2.svg" alt="background-image" class="img2" />
             </div>
-            <div class="slide4">
+            <div class="slide">
+              <img src="images/img2.svg" alt="background-image" class="img2" />
+            </div>
+            <div class="slide">
               <img src="images/img2.svg" alt="background-image" class="img2" />
             </div>
           </div>
@@ -135,29 +158,30 @@
             <li>
               <span>01.</span>
               <h3>High quality proxies</h3>
+              <img src="images/list1.svg" alt="imgList" />
               <p>
                 Mobile proxy LTE, Residential proxies. We check all proxies for
                 Black Lists before purchase, and if it appears, we offer 50%
                 off.
               </p>
             </li>
-            <img src="images/list1.svg" alt="imgList" />
           </div>
           <div class="li">
             <li>
               <span>02.</span>
               <h3>Fast and clean proxies</h3>
+              <img src="images/list2.svg" alt="imgList" class="imgBenefits2" />
               <p>
                 While the proxy is working (except for LTE), there is no
                 rotation of IP addresses like at other services.
               </p>
             </li>
-            <img src="images/list2.svg" alt="imgList" />
           </div>
           <div class="li">
             <li>
               <span>03.</span>
               <h3>Customer support 24/7</h3>
+              <img src="images/list3.svg" alt="imgList" />
               <p>
                 You can make a refund if socks dies within 2 hours. Support
                 telegram:
@@ -166,10 +190,9 @@
                 <a href="/">support@test.org</a>
               </p>
             </li>
-            <img src="images/list3.svg" alt="imgList" />
           </div>
         </ol>
-        <div class="form">
+        <div class="form formBenefits">
           <p>
             Still have questions?<br />
             Write your email and we will contact you
@@ -190,15 +213,28 @@
     <footer class="footer">
       <div class="info">
         <a href="/">
-          <img src="images/ProxyLast.svg" alt="ProxyLab" />
+          <img src="images/ProxyLast.svg" alt="ProxyLab" class="proxyLast" />
         </a>
+        <a href="/" class="proxyLastMobile">
+          <img src="images/ProxyLastMobile.svg" alt="ProxyLab" />
+        </a>
+        <div class="download">
+          <a href="/" class="playmarket">
+            <img src="images/iconPlayMarketMobile.svg" alt="PlayMarket" />
+            DOWNLOAD
+          </a>
+          <a href="/" class="appstore">
+            <img src="images/iconAppStoreMobile.svg" alt="AppStore" />
+            DOWNLOAD
+          </a>
+        </div>
         <ol>
           <h3>Be Our Friend</h3>
           <li>3, Season Park, Jakarta</li>
           <li><a href="mailto:">support@foodyar.co,id</a></li>
-          <li><a href="tel:">021 - 1111 - 2222</a></li>
+          <li><a href="tel:" class="linkTel">021 - 1111 - 2222</a></li>
         </ol>
-        <ol>
+        <ol class="contacts2">
           <h3>Be Our Friend</h3>
           <li>3, Season Park, Jakarta</li>
           <li><a href="mailto:">support@foodyar.co,id</a></li>

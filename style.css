@@ -58,6 +58,12 @@ body {
   justify-content: space-between;
   padding: 6.5vw 5.5% 3vw 5.5%;
 }
+.logoMobile {
+  display: none;
+}
+.listMenu {
+  display: none;
+}
 .navElements {
  display: flex;
  align-items: center;
@@ -134,6 +140,9 @@ body {
 .img1 img{
   width: 51vw;
 }
+.img1mobile {
+  display: none;
+}
 .form {
   display: flex;
   justify-content: space-between;
@@ -141,6 +150,7 @@ body {
   margin-top: 55px;
   padding: 3.4vw 4.8vw 2vw 3.4vw;
   background-color: #75BF7A;
+  border-radius: 10px;
 }
 .form p {
   font-size: 24.6px;
@@ -170,7 +180,6 @@ body {
   width: 18vw;
   height: 5.1vw;
   font-size: 22px;
-  font-weight: 00;
   color: white;
   background-color: black;
   border-radius: 4.4px;
@@ -202,25 +211,28 @@ body {
   color: #9E9DA2;
   width: 43vw;
 }
-
-.slide1  {
-  display: grid;
-  grid-template-columns: 21vw 35.8vw 21vw;
-  grid-template-rows: 1fr 1fr;
-  justify-items: center;
-  justify-content: center;
-  margin-left: 5vw;
+.sliderWrapper {
+  /* width: 100vw; */
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
 }
-.img2 {
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
+.textUpSlide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 35vw;
+  justify-items: center;
+  position: absolute;
+  z-index: 1;
+  left: 5%;
 }
 .listWeOffer {
   width: 21vw;
   margin-bottom: 30px;
+  text-align: end;
 }
 .listWeOffer:nth-child(even) {
-  text-align: end;
+  text-align: left;
 }
 .numberListWeOffer {
   display: flex;
@@ -240,22 +252,34 @@ body {
   background-position: right;
   padding-right: 25px;
 }
-
 .headerListWeOffer {
   font-size: 22px;
   line-height: 26px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .textListWeOffer {
   font-size: 20px;
   line-height: 26px;
   color: #9E9DA2;
 }
-
+.weOfferSlides {
+  display: inline-flex;
+  position: relative;
+  left: 0;
+  transition: 1s;
+}
+.slide {
+  display: flex;
+  justify-content: center;
+  width: 88.8888vw;
+}
+.img2 {
+  max-width: 36vw;
+  margin-right: 50px;
+}
 .dotsWrapper {
   display: flex;
   justify-content: center;
-  margin-top: 5.5vw;
 }
 .dot {
   width: 13px;
@@ -274,25 +298,6 @@ body {
   background: #75BF7A;
 }
 
-.weOfferContent {
-  display: flex;
-  position: relative;
-  left: 0;
-  transition: 1s;
-}
-.sliderWrapper {
-  /* width: 100vw; */
-  overflow: hidden;
-}
-
-.slide2, .slide3, .slide4 {
-  display: grid;
-  grid-template-columns: 21vw 35.8vw 21vw;
-  grid-template-rows: 1fr 1fr;
-  justify-content: center;
-  margin-left: 5vw;}
-
-
   /* Стилизация Benefits */
 .benefits {
   margin-top: 85px;
@@ -307,14 +312,17 @@ body {
   margin-left: 4.86vw;
   border-radius: 10px;
   width: 73.6vw;
+  position: relative;
 }
 .li:nth-child(2) {
   flex-direction: row-reverse;
   margin-left: 10.41vw;
 }
+
 .li li{
   display: grid;
   grid-template-columns: 1fr 2fr;
+  column-gap: 15px;
   width: 28vw;
 }
 .li span{
@@ -322,7 +330,14 @@ body {
   font-size: 88px;
   line-height: 150px;
   font-weight: 800;
-  
+}
+.li img {
+  position: absolute;
+  right: 5vw;
+}
+.imgBenefits2 {
+  bottom: 20px;
+  left: 5vw;
 }
 .li h3{
   font-size:33px;
@@ -339,6 +354,7 @@ body {
 }
 .li a{
   font-size:22px;
+  font-weight: 300;
   color: #9E9DA2;;
 }
 
@@ -352,6 +368,9 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px #ECECEC solid;
+ }
+ .proxyLastMobile {
+  display: none;
  }
  .info h3 {
   font-size: 22px;
@@ -367,7 +386,9 @@ body {
   text-decoration: none;
   margin-bottom: 12px;
  }
-
+.download {
+  display: none;
+}
 .buttons2 .logBTN2, .signBTN2{
   margin-left: 25px;
   font-size: 1.85vw;
