@@ -14,7 +14,7 @@ const thisSlide = (index) => {
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
         position = 100 * index
-        sliderLine.style.left = -position + '%'
+        sliderLine.style.left = -position + 'vw'
         thisSlide(index)
     })
 })
@@ -27,7 +27,7 @@ const nextSlide = () => {
         position = 0
         dotIndex = 0
     }
-    sliderLine.style.left = -position + '%'
+    sliderLine.style.left = -position + 'vw'
     thisSlide(dotIndex)
 }
 
