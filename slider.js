@@ -37,8 +37,7 @@ setInterval(() => {
 
 // Sidebar// 
 function sideBar() {
-    let navigations = document.querySelector(".nav"),
-     x = document.getElementById("myLinks"),
+    let x = document.getElementById("myLinks"),
      y = document.querySelector(".logoMobile"),
      open = document.querySelector('.openSideBar'),
      close = document.querySelector('.closeSideBar')
@@ -47,13 +46,11 @@ function sideBar() {
       y.style.display = "block"
       open.style.display = "flex"
       close.style.display = "none"
-      navigations.style.justifyContent = "space-between"
     } else {
       x.style.display = "flex"
       y.style.display = "none"
       open.style.display = "none"
       close.style.display = "flex"
-      navigations.style.justifyContent = "center"
     }
     if (x.style.width > 500) {
         x.style.display = "flex"
